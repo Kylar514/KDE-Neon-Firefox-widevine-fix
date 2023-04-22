@@ -6,9 +6,9 @@ Current Version of KDE Neon affected: 5.27 (fully up to date as of 4/22/23)
 The first script `neon_firefox_wv_fix.sh` adds a line to the AppArmor profile for Firefox to fix the Widevine plugin crash issue. The second script `undo.sh` restores the AppArmor profile to its original state by deleting the updated profile file and renaming the backup file.
 
 ## Prerequisites
- -This assumes that you are running KDE Neon preloaded firefox browser and are currently being effected by this bug \
- -Alternative solutions to this problem would be to download a alternative version of Firefox, such as flatpack \
- -If you are having this bug on a different distro and or version of firefox, I do not know if this will fix your issue, you are welcome to try \
+ -This assumes that you are running KDE Neon preloaded Firefox browser and are currently being affected by this bug \
+ -Alternative solutions to this problem would be to download an alternative version of Firefox, such as flatpack \
+ -If you are having this bug on a different distro and or version of Firefox, I do not know if this will fix your issue, you are welcome to try \
  -git
  
 ## Bug this is fixing
@@ -55,5 +55,3 @@ To run both scripts together, follow these steps:
    The script will delete the updated Firefox AppArmor profile file and restore the backup file to its original name. It will also reset the AppArmor profile for Firefox.
 
 5. After running the second script, you can test Firefox again to verify that the changes have been undone.
-
-I hope this helps you to run these two scripts together on your local machine. Let me know if you have any further questions or concerns.
