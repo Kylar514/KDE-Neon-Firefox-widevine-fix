@@ -1,59 +1,59 @@
-#on efox vine gin x
+# Neon Firefox Widevine Plugin Fix
 
-is sitory ains o ell ipts at n e ed ther o x  vine gin ash sue n efox n  on-sed nux ibution. \
-rent sion f E on cted: 5.27 (lly p o te s f 4/22/23)
+This repository contains two shell scripts that can be used together to fix a Widevine plugin crash issue in Firefox on a Neon-based Linux distribution. \
+Current Version of KDE Neon affected: 5.27 (fully up to date as of 4/22/23)
 
-e rst ipt `on_efox_v_x.h` ds  ne o e rmor file r efox o x e vine gin ash sue. e ond ipt `do.h` ores e rmor file o s inal ate y ting e ated file le d ming e kup le.
+The first script `neon_firefox_wv_fix.sh` adds a line to the AppArmor profile for Firefox to fix the Widevine plugin crash issue. The second script `undo.sh` restores the AppArmor profile to its original state by deleting the updated profile file and renaming the backup file.
 
-## uisites
- -is umes at u e ning E on oaded efox wser d e ently ing cted y is g \
- -native tions o is blem uld e o load  native sion f efox, ch s pack \
- -f u e ing is g n  erent tro d r sion f efox,  o t ow f is ll x ur sue, u e come o y \
- -t
+## Prerequisites
+ -This assumes that you are running KDE Neon preloaded firefox browser and are currently being effected by this bug \
+ -Alternative solutions to this problem would be to download a alternative version of Firefox, such as flatpack \
+ -If you are having this bug on a different distro and or version of firefox, I do not know if this will fix your issue, you are welcome to try \
+ -git
  
-## g
- -mpted ypted deo back ing vine gin ults n vine ug n hing \
- -rces cted e (t t ited o) flix, lu, emy, d y her ypted deo rce
+## Bug
+ -Attempted encrypted video playback using widevine plugin results in widevine plug in crashing \
+ -Sources affected are (but not limited too) Netflix, Hulu, Udemy, and any other encrypted video source
 
 
-## llation
+## Installation
 
-o t rted, u n load e ipts y ning is Hub sitory o ur cal hine ing e owing mand:
+To get started, you can download the scripts by cloning this GitHub repository to your local machine using the following command:
 
 ```
-t one tps://hub.m/lar514/E-on-efox-vine-x
+git clone https://github.com/Kylar514/KDE-Neon-Firefox-widevine-fix
 ```
 
-ce u ve ned e sitory, gate o e ctory ere e ipts e ated.
+Once you have cloned the repository, navigate to the directory where the scripts are located.
 
-## ning e ipts
+## Running the scripts
 
-o n th ipts ther, low ese eps:
+To run both scripts together, follow these steps:
 
-1. ke e ipts utable y ning e owing mand:
-
-   ```
-   mod + on_efox_v_x.h do.h
-   ```
-
-2. n e rst ipt `on_efox_v_x.h` y ring e owing mand:
+1. Make the scripts executable by running the following command:
 
    ```
-   do ./on_efox_v_x.h
+   chmod +x neon_firefox_wv_fix.sh undo.sh
    ```
 
-   e ipt ll ate  kup f e ting efox rmor file d d  w ne o e file o x e vine gin ash sue.
-
-3. ter ning e rst ipt, u n st efox o e f e sue s en xed.
-
-4. f u ed o do e nges de y e rst ipt, u n n e ond ipt `do.h` y ring e owing mand:
+2. Run the first script `neon_firefox_wv_fix.sh` by entering the following command:
 
    ```
-   do ./do.h
+   sudo ./neon_firefox_wv_fix.sh
    ```
 
-   e ipt ll ete e ated efox rmor file le d tore e kup le o s inal me. t ll so set e rmor file r efox.
+   The script will create a backup of the existing Firefox AppArmor profile and add a new line to the profile to fix the Widevine plugin crash issue.
 
-5. ter ning e ond ipt, u n st efox ain o ify at e nges ve en one.
+3. After running the first script, you can test Firefox to see if the issue has been fixed.
 
- pe is lps u o n ese o ipts ther n ur cal hine. t e ow f u ve y ther tions r erns.
+4. If you need to undo the changes made by the first script, you can run the second script `undo.sh` by entering the following command:
+
+   ```
+   sudo ./undo.sh
+   ```
+
+   The script will delete the updated Firefox AppArmor profile file and restore the backup file to its original name. It will also reset the AppArmor profile for Firefox.
+
+5. After running the second script, you can test Firefox again to verify that the changes have been undone.
+
+I hope this helps you to run these two scripts together on your local machine. Let me know if you have any further questions or concerns.
