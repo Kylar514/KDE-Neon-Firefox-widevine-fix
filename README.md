@@ -11,7 +11,7 @@ The first script `neon_firefox_wv_fix.sh` adds a line to the AppArmor profile fo
  -If you are having this bug on a different distro and or version of firefox, I do not know if this will fix your issue, you are welcome to try \
  -git
  
-## Bug
+## Bug this is fixing
  -Attempted encrypted video playback using widevine plugin results in widevine plug in crashing \
  -Sources affected are (but not limited too) Netflix, Hulu, Udemy, and any other encrypted video source
 
