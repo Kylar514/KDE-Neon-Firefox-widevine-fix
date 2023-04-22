@@ -1,9 +1,3 @@
-#E-on-efox-vine-x
-rent E on tro s  oaded sion f efox at s ble o e e vine gin.  is s  ple ipt gned o x at, ong th  do ipt.  is s  rent sue th E on 5.27 s f 4/22/23.
-
-
-Sure! Here's the text that you can copy and paste into your GitHub repository as a README file:
-
 # Neon Firefox Widevine Plugin Fix
 
 This repository contains two shell scripts that can be used together to fix a Widevine plugin crash issue in Firefox on a Neon-based Linux distribution.
