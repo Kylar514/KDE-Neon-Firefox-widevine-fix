@@ -1,9 +1,7 @@
 # Neon Firefox Widevine Plugin Fix
 
-This repository contains two shell scripts that can be used together to fix a Widevine plugin crash issue in Firefox on a Neon-based Linux distribution. \
+This repository contains multiple shell scripts that can be used together to fix a Widevine plugin crash issue in Firefox on a Neon-based Linux distribution. \
 Current Version of KDE Neon affected: 5.27 (fully up to date as of 4/22/23)
-
-The first script `neon_firefox_wv_fix.sh` adds a line to the AppArmor profile for Firefox to fix the Widevine plugin crash issue. The second script `undo.sh` restores the AppArmor profile to its original state by deleting the updated profile file and renaming the backup file.
 
 ## Prerequisites
  - This assumes that you are running KDE Neon preloaded Firefox browser and are currently being affected by this bug
